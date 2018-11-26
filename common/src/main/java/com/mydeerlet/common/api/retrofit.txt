@@ -1,0 +1,37 @@
+//        Retrofit retrofit = new Retrofit.Builder()
+//                .baseUrl("http://wthrcdn.etouch.cn/")//基础URL 建议以 / 结尾
+//                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+//                .addConverterFactory(GsonConverterFactory.create())//设置 Json 转换器
+//                .build();
+//
+//
+//
+//
+//        WeatherService weatherService = retrofit.create(WeatherService .class);
+//        Single<UpdateModel> call = weatherService.getMessage("北京");
+//
+//        call
+//
+////              .subscribeOn(Schedulers.io())
+//////                .observeOn(AndroidSchedulers.mainThread())
+//                .compose(this.<UpdateModel>scheduleSingle())
+//                .subscribe(new Consumer<UpdateModel>() {
+//                    @Override
+//                    public void accept(UpdateModel updateModel) throws Exception {
+//                        Log.e("TAG", "response == " +  updateModel.getData().getGanmao());
+//                    }
+//                },new RxException<Throwable>());
+
+
+
+  RetrofitManager.getInstance(this)
+        .create(WeatherService.class)
+        .getMessage("北京")
+        .subscribeOn(Schedulers.io())
+        .observeOn(AndroidSchedulers.mainThread())
+        .subscribe(new Consumer<UpdateModel>() {
+            @Override
+            public void accept(UpdateModel updateModel) throws Exception {
+                Log.e("TAG", "response == " +  updateModel.getData().getGanmao());
+            }
+        });
