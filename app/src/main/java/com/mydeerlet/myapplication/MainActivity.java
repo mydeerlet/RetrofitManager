@@ -5,9 +5,11 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import com.mydeerlet.common.Constant;
 import com.mydeerlet.common.api.RetrofitManager;
 import com.mydeerlet.common.api.RxException;
 import com.mydeerlet.common.base.BaseActivity;
+import com.mydeerlet.common.utlis.LogUtils;
 
 import io.reactivex.functions.Consumer;
 
@@ -20,9 +22,10 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        StatusBarUtil.setDarkMode(MainActivity.this);
-//        StatusBarUtil.setColor(MainActivity.this, ContextCompat.getColor(MainActivity.this,R.color.colorAccent),0);
 
+        //初始化
+        Constant.getInstance().init(this,true,
+                true,"http://wthrcdn.etouch.cn/");
 
 
         RetrofitManager.getInstance(this)
@@ -32,9 +35,12 @@ public class MainActivity extends BaseActivity {
                 .subscribe(new Consumer<UpdateModel>() {
                     @Override
                     public void accept(UpdateModel updateModel) throws Exception {
-                        Log.e("TAG", "response == " +  updateModel.getData().getGanmao());
+                        LogUtils.i("aaa",updateModel.getData().getGanmao());
                     }
                 },new RxException<Throwable>());
+
+
+        Log.i("aaa",Constant.BASE_URL);
     }
     @Override
     public View needOffSet() {

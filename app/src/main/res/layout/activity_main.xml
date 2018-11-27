@@ -1,22 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:id="@+id/ddd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ttttttttt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.206" />
 
 
+    <ImageView
+        android:id="@+id/img_login_wb"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginTop="40dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintHorizontal_bias="0.753"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ddd" />
+
+
+    <ImageView
+        android:id="@+id/d"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginTop="40dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintHorizontal_bias="0.187"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ddd" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="304dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ddd" />
+
+
+    <!--app:layout_constraintTop_toBottomOf="@+id/line_1"-->
 
 
     <android.support.design.widget.TextInputLayout
-        android:layout_marginTop="@dimen/dp_20"
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints">
+        android:layout_marginTop="108dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ddd">
 
         <com.mydeerlet.common.custom.ClearEditText
             android:id="@+id/et_phone"
@@ -26,25 +77,30 @@
             android:inputType="phone"
             android:textColor="@android:color/black"
             android:textSize="@dimen/sp_15" />
+
+
     </android.support.design.widget.TextInputLayout>
 
-    <android.support.design.widget.TextInputLayout
-        android:layout_marginTop="@dimen/dp_20"
 
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints">
+        android:layout_marginTop="164dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ddd">
 
         <com.mydeerlet.common.custom.ClearEditText
-            android:id="@+id/f"
+            android:id="@+id/et_num"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="手机号"
-            android:inputType="phone"
-            android:textColor="@android:color/black"
+            android:hint="密码"
+            android:inputType="textPassword"
+            android:paddingTop="@dimen/dp_8"
             android:textSize="@dimen/sp_15" />
     </android.support.design.widget.TextInputLayout>
 
 
 
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>

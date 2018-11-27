@@ -1,4 +1,4 @@
-package com.mydeerlet.common.base;
+package com.mydeerlet.myapplication;
 
 public class HttpResult<T> {
 

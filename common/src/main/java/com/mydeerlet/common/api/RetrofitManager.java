@@ -23,7 +23,7 @@ public class RetrofitManager {
         synchronized (RetrofitManager.class) {
             if (instance == null) {
                 instance = new Retrofit.Builder()
-                        .baseUrl(Api.BASE_URL)
+                        .baseUrl(Constant.BASE_URL)
                         .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                         .addConverterFactory(GsonConverterFactory.create())
                         .client(getOkHttpClient(context))

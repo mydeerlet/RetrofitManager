@@ -17,9 +17,7 @@ public class ToastFactory {
             // toast.cancel();
             toast.setText(text);
             toast.setDuration(Toast.LENGTH_SHORT);
-
         } else {
-
             ToastFactory.context = context.getApplicationContext();
             toast = Toast.makeText(context.getApplicationContext(), text, Toast.LENGTH_SHORT);
         }
