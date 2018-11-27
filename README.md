@@ -31,6 +31,6 @@ Add it in your root build.gradle at the end of repositories:
                     }
                 });
 6. dimens.xml 用来指定dp sp ，没有测试可用性待检测
-7. #### 修改状态栏颜色，使用沉浸式状态栏继承BaseActivity 即可
+7. #### 修改状态栏颜色，使用沉浸式状态栏继承BaseActivity ，BaseFragment 即可
         StatusBarUtil.setDarkMode(MainActivity.this);
         StatusBarUtil.setColor(MainActivity.this, ContextCompat.getColor(MainActivity.this,R.color.colorAccent),0);
