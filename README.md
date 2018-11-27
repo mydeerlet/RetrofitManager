@@ -20,7 +20,9 @@ Add it in your root build.gradle at the end of repositories:
 3. Constant.getInstance().init(); 不须初始化 ，最好在application中
 4. 封装有工具类 LogUtils  ToastFactory
 
-4.  ## 简单使用  
+4.  # 简单使用
+
+    ## 1
      RetrofitManager.getInstance(this)
              .create(Service.class)
              .getMessage("北京")
