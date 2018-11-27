@@ -21,9 +21,7 @@ Add it in your root build.gradle at the end of repositories:
 4. 封装有工具类 LogUtils  ToastFactory
 
 4.  # 简单使用
-
-    ## 1
-     RetrofitManager.getInstance(this)
+    ## RetrofitManager.getInstance(this)
              .create(Service.class)
              .getMessage("北京")
              .compose(this.<UpdateModel>scheduleSingle())
