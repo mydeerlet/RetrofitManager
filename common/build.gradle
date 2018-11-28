@@ -19,7 +19,7 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -44,6 +44,8 @@ dependencies {
     api 'com.squareup.retrofit2:adapter-rxjava2:2.3.0' // 必要依赖，和Rxjava结合必须用到，下面会提到
     api 'com.squareup.retrofit2:converter-gson:2.4.0' // 必要依赖，解析json字符所用
     api 'com.squareup.okhttp3:logging-interceptor:3.10.0' //非必要依赖， log依赖，如果需要打印OkHttpLog需要添加
+
+
 
     api 'com.trello.rxlifecycle2:rxlifecycle-components:2.2.2'
 //    实现' com.trello.rxlifecycle3：rxlifecycle：3.0.0 '
