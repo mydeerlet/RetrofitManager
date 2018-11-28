@@ -17,7 +17,7 @@ Add it in your root build.gradle at the end of repositories:
 2. 引入依赖
    implementation 'com.github.mydeerlet:RetrofitManager:0.2'
 
-3. Constant.getInstance().init(); 不须初始化 ，最好在application中
+3. Constant.getInstance().init(); 必须初始化 ，最好在application中
 4. 封装有工具类 LogUtils  ToastFactory
 
 5. ### 简单使用
