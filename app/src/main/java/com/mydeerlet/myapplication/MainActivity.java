@@ -42,6 +42,7 @@ public class MainActivity extends BaseActivity {
 
         Log.i("aaa",Constant.BASE_URL);
     }
+
     @Override
     public View needOffSet() {
         return null;
