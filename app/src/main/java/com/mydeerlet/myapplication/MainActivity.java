@@ -2,10 +2,16 @@ package com.mydeerlet.myapplication;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import com.mydeerlet.common.Constant;
+import com.mydeerlet.common.api.RetrofitManager;
+import com.mydeerlet.common.api.RxException;
 import com.mydeerlet.common.base.BaseActivity;
+import com.mydeerlet.common.utlis.LogUtils;
+
+import io.reactivex.functions.Consumer;
 
 public class MainActivity extends BaseActivity {
 
@@ -21,20 +27,20 @@ public class MainActivity extends BaseActivity {
         Constant.getInstance().init(this,true,
                 true,"http://wthrcdn.etouch.cn/");
 
-//
-//        RetrofitManager.getInstance(this)
-//                .create(Service.class)
-//                .getMessage("北京")
-//                .compose(this.<UpdateModel>scheduleSingle())
-//                .subscribe(new Consumer<UpdateModel>() {
-//                    @Override
-//                    public void accept(UpdateModel updateModel) throws Exception {
-//                        LogUtils.i("aaa",updateModel.getData().getGanmao());
-//                    }
-//                },new RxException<Throwable>());
-//
-//
-//        Log.i("aaa",Constant.BASE_URL);
+
+        RetrofitManager.getInstance(this)
+                .create(Service.class)
+                .getMessage("北京")
+                .compose(this.<UpdateModel>scheduleSingle())
+                .subscribe(new Consumer<UpdateModel>() {
+                    @Override
+                    public void accept(UpdateModel updateModel) throws Exception {
+                        LogUtils.i("aaa",updateModel.getData().getGanmao());
+                    }
+                },new RxException<Throwable>());
+
+
+        Log.i("aaa",Constant.BASE_URL);
     }
 
     @Override
