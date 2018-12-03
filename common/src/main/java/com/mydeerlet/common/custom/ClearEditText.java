@@ -23,8 +23,6 @@ public class ClearEditText  extends AppCompatEditText implements View.OnFocusCha
 
     public ClearEditText(Context context, AttributeSet attrs) {
         super(context, attrs);
-//        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.ClearEditText);
-//        drawable = typedArray.getDrawable(R.styleable.ClearEditText_img);
         if (null == drawable){
             drawable = getResources().getDrawable(R.drawable.ic_edit_right);
         }
