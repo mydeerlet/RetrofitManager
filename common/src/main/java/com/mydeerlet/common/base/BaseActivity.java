@@ -3,6 +3,7 @@ package com.mydeerlet.common.base;
 
 import android.os.Build;
 import android.os.IBinder;
+import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -10,7 +11,6 @@ import android.widget.EditText;
 
 import com.mydeerlet.common.utlis.OSUtils;
 import com.mydeerlet.common.utlis.StatusBarUtil;
-import com.trello.rxlifecycle2.components.RxActivity;
 
 import io.reactivex.Observable;
 import io.reactivex.ObservableSource;
@@ -21,7 +21,7 @@ import io.reactivex.SingleTransformer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 
-public abstract class BaseActivity extends RxActivity {
+public abstract class BaseActivity extends AppCompatActivity {
 
 
 
